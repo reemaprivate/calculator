@@ -1,3 +1,4 @@
+require 'calculator.rb'
 
 RSpec.describe Calculator do
   it 'creates a Calculator class' do
