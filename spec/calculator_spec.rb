@@ -5,4 +5,9 @@ RSpec.describe Calculator do
     calc = Calculator.new
     expect(calc).to be_kind_of(Calculator)
   end
+
+  it 'adds nothing' do
+    calc = Calculator.new
+    expect(calc).to respond_to("add")
+  end
 end
