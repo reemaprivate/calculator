@@ -29,4 +29,10 @@ RSpec.describe Calculator do
     expect(val).to eql(0)
   end
 
+  it 'add with valid numbers separated by comma' do
+    calc = Calculator.new
+    val = calc.add("3,5")
+    expect(val).to eql(8)
+  end
+
 end
