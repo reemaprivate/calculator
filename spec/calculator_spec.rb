@@ -23,5 +23,10 @@ RSpec.describe Calculator do
     expect(msg).to include("Please pass string as input")
   end
 
+  it 'add with empty string argument' do
+    calc = Calculator.new
+    val = calc.add("")
+    expect(val).to eql(0)
+  end
 
 end
