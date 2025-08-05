@@ -16,4 +16,12 @@ RSpec.describe Calculator do
     expect(Calculator.new.method(:add).arity).to eq(1)
   end
 
+
+  it 'add only accepts string argument' do
+    calc = Calculator.new
+    msg = calc.add([1,3])
+    expect(msg).to include("Please pass string as input")
+  end
+
+
 end
