@@ -11,7 +11,9 @@ RSpec.describe Calculator do
     expect(calc).to respond_to("add")
   end
 
+  ## argument should always be 1.
   it 'adds allows argument' do
-    expect(Calculator.new.method(:add).arity).to be > (0)
+    expect(Calculator.new.method(:add).arity).to eq(1)
   end
+
 end
