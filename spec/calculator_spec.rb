@@ -35,4 +35,10 @@ RSpec.describe Calculator do
     expect(val).to eql(8)
   end
 
+  it 'should add with new line delimiter along with comma' do
+    calc = Calculator.new
+    val = calc.add("1\n2,3")
+    expect(val).to eql(6)
+  end
+
 end
