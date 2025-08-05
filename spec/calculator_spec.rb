@@ -41,4 +41,10 @@ RSpec.describe Calculator do
     expect(val).to eql(6)
   end
 
+  it 'should add with delimiter ;' do
+    calc = Calculator.new
+    val = calc.add("//;\n1;2")
+    expect(val).to eql(3)
+  end
+  
 end
