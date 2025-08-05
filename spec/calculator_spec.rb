@@ -46,5 +46,11 @@ RSpec.describe Calculator do
     val = calc.add("//;\n1;2")
     expect(val).to eql(3)
   end
+
+  it 'should not add with negative numbers' do
+    calc = Calculator.new
+    val = calc.add("//;\n1;-2;-4;6")
+    expect(val).to include("negative numbers not allowed")
+  end
   
 end
